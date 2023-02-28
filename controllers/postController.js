@@ -22,7 +22,6 @@ export const postController = {
     },
 
     async getAll(req, res) {
-        console.log('getall');
         try {
             const posts = await PostModel.find().populate('user').exec();
             res.json(posts);

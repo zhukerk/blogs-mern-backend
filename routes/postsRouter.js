@@ -6,7 +6,7 @@ import { postCreateValidation } from '../validations/index.js';
 
 export const postsRouter = new Router();
 
-postsRouter.get('/',checkAuthMiddleware, postController.getAll);
+postsRouter.get('/', postController.getAll);
 postsRouter.get('/tags', postController.getLastTags);
 postsRouter.get('/:id', postController.getOne);
 
